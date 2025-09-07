@@ -1,324 +1,177 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilham Nurmansyah - IT Support & Network Specialist</title>
-    <meta name="description" content="Portofolio Ilham Nurmansyah - IT Support & Network Specialist. Berpengalaman dalam Network Management, IoT Development, dan Technical Support.">
-    <meta property="og:title" content="Ilham Nurmansyah - IT Support & Network Specialist">
-    <meta property="og:description" content="Portofolio & pengalaman kerja Ilham Nurmansyah di bidang IT Support, Network Management, dan IoT.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 0.8s ease;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            font-weight: bold;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .header .subtitle {
-            font-size: 1.3em;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-        }
-        .header .description {
-            font-size: 1.1em;
-            color: #34495e;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            opacity: 0.8;
-        }
-        .section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 0.8s ease;
-        }
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-        .education-item, .experience-item, .project-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(103, 126, 234, 0.05);
-            border-radius: 15px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .education-item:hover, .experience-item:hover, .project-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(103, 126, 234, 0.2);
-        }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        .item-title {
-            font-size: 1.4em;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-        .item-subtitle {
-            font-size: 1.1em;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-        .item-period {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-        .item-description {
-            color: #555;
-            line-height: 1.8;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background: rgba(103, 126, 234, 0.05);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-        .contact-item:hover {
-            transform: translateY(-3px);
-        }
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: white;
-            font-size: 20px;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .skill-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(103, 126, 234, 0.05);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-        .skill-item:hover {
-            transform: translateY(-5px);
-        }
-        .skill-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 768px) {
-            .container { padding: 10px; }
-            .header, .section { padding: 20px; }
-            .header h1 { font-size: 2em; }
-            .item-header { flex-direction: column; align-items: flex-start; }
-            .item-period { margin-top: 10px; }
-        }
-        .nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-            position: sticky;
-            top: 10px;
-            z-index: 1000;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 25px;
-            transition: background 0.3s ease;
-            display: inline-block;
-        }
-        .nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        .nav a.active {
-            background: rgba(255, 255, 255, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilham Nurmansyah - IT Support & Network Specialist</title>
+  <meta name="description" content="Portofolio Ilham Nurmansyah - IT Support & Network Specialist. Berpengalaman dalam Network Management, IoT Development, dan Technical Support.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg,#667eea,#764ba2);
+      color:#333;
+      line-height:1.6;
+    }
+    .container{max-width:1200px;margin:auto;padding:20px;}
+    /* Navbar */
+    .nav{
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      border-radius:50px;
+      padding:10px;
+      margin-bottom:30px;
+      text-align:center;
+      position:sticky;top:10px;z-index:1000;
+    }
+    .nav a{
+      color:#fff;text-decoration:none;
+      padding:10px 20px;margin:0 5px;border-radius:25px;
+      transition:.3s;
+    }
+    .nav a:hover{background:rgba(255,255,255,0.2);}
+    .nav a.active{background:rgba(255,255,255,0.3);}
+    /* Header */
+    .header{
+      background:#fff;
+      border-radius:20px;
+      padding:40px;
+      text-align:center;
+      margin-bottom:30px;
+    }
+    .profile-img{
+      width:150px;height:150px;border-radius:50%;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+      margin:auto;margin-bottom:20px;
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-size:60px;font-weight:bold;
+    }
+    .header h1{
+      font-size:2.5em;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .subtitle{font-size:1.2em;color:#555;margin-bottom:15px;}
+    .description{max-width:800px;margin:auto;color:#444;}
+    .btn{
+      display:inline-block;margin-top:20px;
+      padding:10px 20px;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+      color:#fff;border-radius:25px;text-decoration:none;font-weight:bold;
+    }
+    /* Section */
+    .section{
+      background:#fff;
+      border-radius:20px;
+      padding:40px;margin-bottom:30px;
+    }
+    .section-title{
+      font-size:2em;margin-bottom:25px;position:relative;display:inline-block;
+      color:#2c3e50;
+    }
+    .section-title::after{
+      content:'';position:absolute;bottom:-8px;left:0;
+      width:50px;height:3px;background:linear-gradient(135deg,#667eea,#764ba2);
+      border-radius:2px;
+    }
+    .item{margin-bottom:20px;padding:20px;border-left:4px solid #667eea;
+      border-radius:10px;background:#f9f9ff;}
+    .item-title{font-weight:600;font-size:1.2em;color:#2c3e50;}
+    .item-subtitle{color:#667eea;font-size:1em;}
+    .item-period{font-size:.9em;color:#fff;background:#667eea;
+      padding:3px 10px;border-radius:15px;display:inline-block;margin-top:5px;}
+    .item-desc{margin-top:10px;color:#444;}
+    /* Grid */
+    .projects-grid,.skills-grid,.contact-grid{
+      display:grid;gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    }
+    .card{padding:20px;border-radius:15px;background:#f9f9ff;}
+    .skill-icon{font-size:2em;color:#667eea;margin-bottom:10px;}
+    .contact-item{display:flex;align-items:center;gap:15px;padding:15px;background:#f9f9ff;border-radius:10px;}
+    .contact-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;display:flex;align-items:center;justify-content:center;}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<div class="container">
 
-        <div class="header" id="about">
-            <div class="profile-img">IN</div>
-            <h1>Ilham Nurmansyah</h1>
-            <p class="subtitle">IT Support & Network Specialist</p>
-            <p class="description">
-                Fresh graduate Teknik Komputer dari Universitas Teknologi Yogyakarta dengan spesialisasi Internet of Things (IoT). 
-                Memiliki background 1+ tahun dalam manajemen jaringan RT/RW Net, melayani 40+ pelanggan dengan tingkat kepuasan 95%. 
-                Selama kuliah, aktif mengembangkan berbagai sistem monitoring berbasis IoT.
-            </p>
-            <a href="Ilham-Nurmansyah-CV.pdf" download class="btn">📄 Download CV</a>
-        </div>
+  <!-- Navbar -->
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <!-- Education, Experience, Projects, Skills, Contact tetap sama -->
-        <!-- ... (isi section kamu yang lama) ... -->
+  <!-- About -->
+  <div class="header section" id="about">
+    <div class="profile-img">IN</div>
+    <h1>Ilham Nurmansyah</h1>
+    <p class="subtitle">IT Support & Network Specialist</p>
+    <p class="description">
+      Fresh graduate Teknik Komputer dari Universitas Teknologi Yogyakarta dengan spesialisasi Internet of Things (IoT).
+      Memiliki pengalaman lebih dari 1 tahun mengelola jaringan RT/RW Net dengan 40+ pelanggan, serta aktif
+      mengembangkan sistem monitoring berbasis IoT.
+    </p>
+    <a href="Ilham-Nurmansyah-CV.pdf" download class="btn">📄 Download CV</a>
+  </div>
 
+  <!-- Education -->
+  <div class="section" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="item">
+      <div class="item-title">Universitas Teknologi Yogyakarta</div>
+      <div class="item-subtitle">S1 Teknik Komputer</div>
+      <div class="item-period">2019 - 2023</div>
+      <p class="item-desc">Fokus pada Internet of Things, jaringan komputer, dan sistem embedded. Aktif di proyek riset IoT monitoring kualitas udara.</p>
     </div>
+  </div>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+  <!-- Experience -->
+  <div class="section" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="item">
+      <div class="item-title">Manajemen RT/RW Net</div>
+      <div class="item-subtitle">Administrator Jaringan</div>
+      <div class="item-period">2020 - 2022</div>
+      <p class="item-desc">Mengelola jaringan RT/RW Net dengan lebih dari 40 pelanggan, troubleshooting, upgrade infrastruktur, dan memastikan uptime di atas 95%.</p>
+    </div>
+    <div class="item">
+      <div class="item-title">Technical Support Freelance</div>
+      <div class="item-subtitle">Support Hardware & Software</div>
+      <div class="item-period">2021 - Sekarang</div>
+      <p class="item-desc">Memberikan solusi perbaikan perangkat komputer, konfigurasi jaringan kecil, serta dukungan instalasi software dan hardware.</p>
+    </div>
+  </div>
 
-        // Animasi saat scroll
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+  <!-- Projects -->
+  <div class="section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Sistem Monitoring Kualitas Udara IoT</h3>
+        <p>Menggunakan ESP32, sensor MQ135 & MQ2, Firebase, dan MIT App Inventor untuk monitoring kualitas udara real-time.</p>
+      </div>
+      <div class="card">
+        <h3>RT/RW Net Management</h3>
+        <p>Membangun dan mengelola jaringan internet lokal untuk 40+ pelanggan dengan uptime tinggi dan biaya efisien.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Home Prototype</h3>
+        <p>Prototype rumah pintar sederhana menggunakan ESP32 dan relay untuk kontrol lampu dan kipas via aplikasi mobile.</p>
+      </div>
+    </div>
+  </div>
 
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
+  <!-- Skills -->
+  <div class="section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="card"><div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>Networking (Mikrotik, TCP/IP, VLAN)</div>
+      <div class="card"><div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>IoT (ESP32, Sensor MQ, Firebase)</div>
+      <div class="card"><div class="skill-icon"><i class="fa-brands fa-cuttlefish"></i></div>C & C++ Pr
 
-        // Highlight nav aktif
-        const sections = document.querySelectorAll(".header, .section");
-        const navLinks = document.querySelectorAll(".nav a");
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
-                if (pageYOffset >= sectionTop) {
-                    current = section.getAttribute("id");
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
-</body>
-</html>

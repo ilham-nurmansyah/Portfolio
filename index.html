@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ilham Nurmansyah - IT Support & Network Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -12,489 +13,207 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            line-height: 1.6;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: auto;
+            background: white;
             padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
+        header {
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .header .subtitle {
-            font-size: 1.3em;
-            color: #7f8c8d;
             margin-bottom: 20px;
         }
 
-        .header .description {
-            font-size: 1.1em;
-            color: #34495e;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        .education-item, .experience-item, .project-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(103, 126, 234, 0.05);
-            border-radius: 15px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .education-item:hover, .experience-item:hover, .project-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(103, 126, 234, 0.2);
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .item-title {
-            font-size: 1.4em;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .item-subtitle {
-            font-size: 1.1em;
-            color: #667eea;
+        header h1 {
+            font-size: 28px;
             margin-bottom: 5px;
+            color: #2c3e50;
         }
 
-        .item-period {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        .item-description {
+        header p {
+            font-size: 16px;
             color: #555;
-            line-height: 1.8;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 3px;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 15px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            padding: 15px;
-            background: rgba(103, 126, 234, 0.05);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-3px);
+            gap: 10px;
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
             color: white;
-            font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
+        /* Icon warna khusus */
+        .contact-icon.email { background: #e74c3c; }
+        .contact-icon.phone { background: #2ecc71; }
+        .contact-icon.location { background: #9b59b6; }
+
+        .contact-icon.instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .contact-icon.linkedin {
+            background: #0077B5;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 15px;
         }
 
-        .skill-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(103, 126, 234, 0.05);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .header, .section {
-                padding: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .item-period {
-                margin-top: 10px;
-            }
-        }
-
-        .nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
+        .skills-item {
+            background: #ecf0f1;
             padding: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 25px;
-            transition: background 0.3s ease;
-            display: inline-block;
-        }
-
-        .nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="header" id="about">
-            <div class="profile-img">IN</div>
+        <header>
             <h1>Ilham Nurmansyah</h1>
-            <p class="subtitle">IT Support & Network Specialist</p>
-            <p class="description">
-                Fresh graduate Teknik Komputer dari Universitas Teknologi Yogyakarta dengan spesialisasi Internet of Things (IoT). 
-                Memiliki background 1+ tahun dalam manajemen jaringan RT/RW Net, melayani 40+ pelanggan dengan tingkat kepuasan 95%. 
-                Selama kuliah, aktif mengembangkan berbagai sistem monitoring berbasis IoT.
-            </p>
-        </div>
+            <p>IT Support & Network Specialist</p>
+        </header>
 
-        <div class="section" id="education">
-            <h2 class="section-title">🎓 Education</h2>
-            <div class="education-item">
-                <div class="item-header">
-                    <div>
-                        <div class="item-title">S1 - Teknik Komputer</div>
-                        <div class="item-subtitle">Universitas Teknologi Yogyakarta</div>
-                        <div class="item-subtitle">Spesialisasi Internet of Things (IoT)</div>
-                        <div class="item-subtitle">IPK: 3.42/4.00</div>
-                    </div>
-                    <div class="item-period">2021-2025</div>
-                </div>
-                <div class="item-description">
-                    <strong>Skripsi:</strong> "Perancangan Sistem Monitoring Kualitas Udara Berbasis App Android dengan MIT App Inventor"
-                    <br><br>
-                    Mengintegrasikan sensor gas dengan aplikasi mobile untuk monitoring real-time kualitas udara. 
-                    Fokus pembelajaran pada pengembangan sistem monitoring berbasis IoT, network configuration, dan mobile application development.
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="experience">
-            <h2 class="section-title">💼 Experience</h2>
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
-                        <div class="item-title">Network Support</div>
-                        <div class="item-subtitle">RT/RW Net Management</div>
-                    </div>
-                    <div class="item-period">2024 - Sekarang</div>
-                </div>
-                <div class="item-description">
-                    • Mengelola infrastruktur jaringan untuk 40+ pelanggan dengan tingkat uptime 95%<br>
-                    • Melakukan instalasi dan konfigurasi router Mikrotik untuk optimasi layanan internet<br>
-                    • Berhasil mengurangi downtime rata-rata 30% melalui troubleshooting onsite dan optimasi konfigurasi<br>
-                    • Memberikan technical support dengan tingkat kepuasan pelanggan 95%
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
-                        <div class="item-title">Kerja Praktik</div>
-                        <div class="item-subtitle">SMPN 1 CIGANDAMEKAR</div>
-                    </div>
-                    <div class="item-period">2024</div>
-                </div>
-                <div class="item-description">
-                    • Merancang dan mengembangkan sistem monitoring kualitas udara berbasis Internet of Things<br>
-                    • Mengimplementasikan integrasi sensor gas dengan platform Blynk untuk menampilkan data real-time<br>
-                    • Mengembangkan sistem notifikasi otomatis via email untuk alert kualitas udara yang berbahaya
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="projects">
-            <h2 class="section-title">🚀 Projects</h2>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Air Quality Monitoring System</div>
-                            <div class="item-subtitle">Proyek Skripsi</div>
-                        </div>
-                        <div class="item-period">2025</div>
-                    </div>
-                    <div class="item-description">
-                        Merancang sistem monitoring kualitas udara berbasis Internet of Things dengan aplikasi Android menggunakan MIT App Inventor. 
-                        Sistem ini mengintegrasikan gas sensor untuk mengukur kualitas udara secara real-time dan menampilkan data pada aplikasi mobile.
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Smart Plug Monitoring System</div>
-                            <div class="item-subtitle">Pervasive Computing Project</div>
-                        </div>
-                        <div class="item-period">2023</div>
-                    </div>
-                    <div class="item-description">
-                        Sistem IoT untuk monitoring konsumsi listrik real-time menggunakan current sensor dan Blynk platform. 
-                        Dirancang sebagai solusi smart home untuk optimasi penggunaan energi dengan dashboard yang memungkinkan pengguna 
-                        memantau pola penggunaan listrik dan mendapatkan insight untuk efisiensi energi.
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Fire Detection System</div>
-                            <div class="item-subtitle">Capstone Project</div>
-                        </div>
-                        <div class="item-period">2022</div>
-                    </div>
-                    <div class="item-description">
-                        Sistem deteksi kebakaran berbasis Internet of Things dengan multi-platform notification menggunakan Telegram Bot API 
-                        dan flame sensor. Fokus pada response time yang cepat dan reliabilitas notifikasi dengan alert melalui Blynk dashboard 
-                        untuk monitoring real-time dan Telegram bot untuk notifikasi instant.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="skills">
-            <h2 class="section-title">⚡ Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Network Management</h3>
-                    <p>Mikrotik, Router Configuration, RT/RW Net</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📱</div>
-                    <h3>IoT Development</h3>
-                    <p>Arduino, Sensors, Blynk Platform</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Technical Support</h3>
-                    <p>Troubleshooting, System Maintenance</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📱</div>
-                    <h3>Mobile Development</h3>
-                    <p>MIT App Inventor, Android Development</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📊</div>
-                    <h3>Monitoring Systems</h3>
-                    <p>Real-time Data, Dashboard Design</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🤖</div>
-                    <h3>Automation</h3>
-                    <p>Telegram Bot API, Email Notifications</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="contact">
-            <h2 class="section-title">📞 Contact</h2>
+        <!-- Contact -->
+        <section>
+            <h2>📞 Contact</h2>
             <div class="contact-grid">
                 <div class="contact-item">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon email"><i class="fas fa-envelope"></i></div>
                     <div>
                         <strong>Email</strong><br>
-                        nmansyah38@gmail.com
+                        <a href="mailto:nmansyah38@gmail.com">nmansyah38@gmail.com</a>
                     </div>
                 </div>
+
                 <div class="contact-item">
-                    <div class="contact-icon">📱</div>
+                    <div class="contact-icon phone"><i class="fas fa-phone"></i></div>
                     <div>
                         <strong>Phone</strong><br>
-                        081223062968
+                        <a href="tel:081223062968">081223062968</a>
                     </div>
                 </div>
+
                 <div class="contact-item">
-                    <div class="contact-icon">📍</div>
+                    <div class="contact-icon location"><i class="fas fa-map-marker-alt"></i></div>
                     <div>
                         <strong>Location</strong><br>
                         Cirebon, Jawa Barat
                     </div>
                 </div>
+
+                <!-- Instagram -->
+                <div class="contact-item">
+                    <div class="contact-icon instagram"><i class="fab fa-instagram"></i></div>
+                    <div>
+                        <strong>Instagram</strong><br>
+                        <a href="https://instagram.com/ilhamnrmnsyh_" target="_blank">@ilhamnrmnsyh_</a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-item">
+                    <div class="contact-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+                    <div>
+                        <strong>LinkedIn</strong><br>
+                        <a href="https://www.linkedin.com/in/ilhamnurmansyah" target="_blank">linkedin.com/in/ilhamnurmansyah</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2>💻 Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-item">
+                    <strong>Networking</strong>
+                    <ul>
+                        <li>LAN/WAN</li>
+                        <li>TCP/IP</li>
+                        <li>Mikrotik</li>
+                        <li>Routing</li>
+                    </ul>
+                </div>
+                <div class="skills-item">
+                    <strong>IT Support</strong>
+                    <ul>
+                        <li>Troubleshooting Hardware/Software</li>
+                        <li>Technical Support</li>
+                        <li>Helpdesk</li>
+                        <li>Installation & Maintenance</li>
+                    </ul>
+                </div>
+                <div class="skills-item">
+                    <strong>Programming</strong>
+                    <ul>
+                        <li>C++</li>
+                        <li>Python (basic)</li>
+                    </ul>
+                </div>
+                <div class="skills-item">
+                    <strong>Office Tools</strong>
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>Google Workspace</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <script>
-        // Smooth scrolling untuk navigasi
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Animasi saat scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
-
